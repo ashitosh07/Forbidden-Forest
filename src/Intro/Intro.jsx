@@ -1,7 +1,7 @@
 import React from 'react'
 import IntroImage from '../assets/Intro.png'
 import SwordsmenImage from '../assets/Swordsmen.png'
-import EpicButtonImage from '../assets/epicbutton.png'
+import EpicButtonImage from '../assets/epicButton.png'
 import LogoTopLeft from '../assets/Vector.png'
 import './IntroScreen.css' // Import the CSS file
 
