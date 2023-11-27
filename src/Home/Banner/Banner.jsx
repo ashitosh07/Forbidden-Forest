@@ -39,7 +39,7 @@ const Banner = () => {
   const logoTopLeftStyle = {
     position: 'absolute',
     top: '30px',
-    left: '10%',
+    left: '5%',
     width: '68.49px', // Adjust the width as needed
     height: '37px', // Adjust the height as needed
     zIndex: 2,
