@@ -1,33 +1,41 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom' // Use useNavigate instead of useHistory
 import IntroImage from '../assets/Intro.png'
 import SwordsmenImage from '../assets/Swordsmen.png'
 import EpicButtonImage from '../assets/epicButton.png'
 import LogoTopLeft from '../assets/Vector.png'
-import './IntroScreen.css' // Import the CSS file
+import './IntroScreen.css'
 
 const fontStyles = `
   @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500&family=Mukta:wght@200&family=Staatliches&display=swap');
-  @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500&family=Mukta:wght@200&family=Mystery+Quest&family=Staatliches&display=swap');`
+`
 
 const IntroScreen = () => {
+  const navigate = useNavigate() // useNavigate for navigation
+
   const textStyle = {
     fontFamily: 'Mystery Quest',
     fontSize: '36px',
-    letterSpacing: '4px', // Adjusted letter-spacing value
+    letterSpacing: '4px',
     textAlign: 'left',
   }
 
   const splitText = (text) => {
     return text.split('\n').map((line, index) => (
       <React.Fragment key={index}>
-        {index > 0 && <br />} {/* Add <br /> after the first line */}
+        {index > 0 && <br />}
         {line}
       </React.Fragment>
     ))
   }
+
+  const handleButtonClick = () => {
+    // Redirect to /home when the button is clicked
+    navigate('/home')
+  }
+
   return (
     <div className='intro-screen'>
-      {' '}
       <style>{fontStyles}</style>
       <img src={SwordsmenImage} alt='Swordsmen' className='swordsmen' />
       <img src={LogoTopLeft} alt='Top Left Logo' className='logo-top-left' />
@@ -46,7 +54,8 @@ const IntroScreen = () => {
           src={EpicButtonImage}
           alt='Epic Button'
           width='200px'
-          style={{ float: 'left', marginTop: '30px' }}
+          style={{ float: 'left', marginTop: '30px', cursor: 'pointer' }}
+          onClick={handleButtonClick}
         />
       </div>
     </div>

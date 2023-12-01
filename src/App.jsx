@@ -5,6 +5,7 @@ import Loader from './shared/Loader'
 import Navbar from './shared/Navbar'
 import Footer from './shared/Footer'
 import Intro from './Intro/Intro'
+import HomePage from './HomePage/HomePage'
 
 const Home = React.lazy(() => import('./Home/Home'))
 
@@ -17,6 +18,7 @@ function App() {
       {/* <Suspense fallback={<Loader />}> */}
       <Routes>
         <Route path='/' element={<Home />} />
+        <Route path='/home' element={<HomePage />} />
         <Route path='/intro' element={<Intro />} />
         <Route path='/404' element={<NotFound />} />
         <Route path='*' element={<Navigate replace to='/404' />}></Route>
