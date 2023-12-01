@@ -133,7 +133,6 @@ const Journey = () => {
                       color: '#62EDED',
                       marginRight: '5px',
                       fontWeight: 'bold',
-                      fontWeight: 'bold',
                     }}
                   >
                     7

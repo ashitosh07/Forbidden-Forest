@@ -8,7 +8,7 @@ import twitterIcon from '../assets/twitter.png'
 import instagramIcon from '../assets/instagram.png'
 import discordIcon from '../assets/discord.png'
 import rectangle from '../assets/Rectangle.png'
-import button from '../assets/button.png'
+import button from '../assets/Button.png'
 import explorebtn from '../assets/explorebtn.png'
 const Explore = () => {
   const fontStyles = `
