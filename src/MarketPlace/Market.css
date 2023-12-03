@@ -1,0 +1,138 @@
+/* IntroScreen.css */
+
+.market-screen {
+  background-image: url('../assets/Marketplacebg.png'); /* Adjust the path to your IntroImage */
+  background-size: cover;
+  background-position: right;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: white;
+  font-size: 24px;
+  position: relative;
+}
+
+.MarketplaceWarrior {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50%;
+  height: 100vh;
+  z-index: 1;
+}
+
+.logo-top-left {
+  position: absolute;
+  top: 30px;
+  left: 5%;
+  width: 68.49px;
+  height: 37px;
+  z-index: 2;
+}
+
+.content-market {
+  z-index: 2;
+  text-align: center;
+  width: 781px;
+  height: auto;
+  padding-right: 97px;
+  margin-right: 100px;
+}
+
+.content-market h1 {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.content-market p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+/* Add these styles for the social icons and warriors */
+.social-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.social-icon {
+  font-size: 24px; /* Adjust as needed */
+  width: 80px;
+  margin-right: 10px; /* Adjust spacing */
+}
+
+/* Add styles for the warrior row */
+.warrior-row {
+  display: flex;
+  z-index: 9990;
+  /* justify-content: space-between; */
+  margin-top: 13%;
+  margin-left: 130px;
+}
+
+/* Add styles for individual warrior images */
+.warrior-image {
+  position: relative;
+  width: 24%;
+  margin-right: 10px;
+
+  overflow: hidden;
+}
+
+.warrior-image img {
+  width: 100%;
+  padding: 8px 8px 0 8px;
+  height: auto;
+  display: block;
+}
+
+/* Add styles for the WarriorOverlay */
+.warrior-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.forbidden-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9000; /* Make sure it's on top of other elements */
+  overflow: hidden;
+}
+
+.forbidden-image {
+  width: 162%;
+  height: auto;
+  position: absolute;
+  top: 67%;
+  left: 83%;
+  transform: translate(-50%, -50%);
+}
+/* Add this to your Market.css file */
+.social-icons-column {
+  position: fixed;
+  bottom: 38px;
+  left: 100px;
+  display: flex;
+  flex-direction: column;
+}
+
+.social-icon-market {
+  width: 25px;
+  height: 25px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+/* Add additional styling as needed */

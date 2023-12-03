@@ -6,6 +6,10 @@ import Navbar from './shared/Navbar'
 import Footer from './shared/Footer'
 import Intro from './Intro/Intro'
 import HomePage from './HomePage/HomePage'
+import Marketplace from './MarketPlace/Marketplace'
+import Merchandise from './Merchandise/Merchandise'
+
+import OverviewPage from './Overview/OverviewPage'
 
 const Home = React.lazy(() => import('./Home/Home'))
 
@@ -17,7 +21,10 @@ function App() {
       {/* {isFalse || <Navbar />} */}
       {/* <Suspense fallback={<Loader />}> */}
       <Routes>
-        <Route path='/' element={<Home />} />
+        <Route path='/' element={<Home />} />{' '}
+        <Route path='/marketplace' element={<Marketplace />} />
+        <Route path='/merchandise' element={<Merchandise />} />
+        <Route path='/overview' element={<OverviewPage />} />
         <Route path='/home' element={<HomePage />} />
         <Route path='/intro' element={<Intro />} />
         <Route path='/404' element={<NotFound />} />

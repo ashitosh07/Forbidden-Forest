@@ -10,7 +10,9 @@ import discordIcon from '../assets/discord.png'
 import rectangle from '../assets/Rectangle.png'
 import button from '../assets/Button.png'
 import explorebtn from '../assets/explorebtn.png'
+import { useNavigate } from 'react-router-dom' // Use useNavigate instead of useHistory
 const Explore = () => {
+  const navigate = useNavigate() // useNavigate for navigation
   const fontStyles = `
   @import
   url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500&family=Mukta:wght@200&family=Mystery+Quest&family=Staatliches&family=Syne:wght@400;800&display=swap');
@@ -78,6 +80,7 @@ const Explore = () => {
 
   const navLinkStyles = {
     color: 'white',
+    cursor: 'pointer',
     textDecoration: 'none',
     margin: '0 20px',
     fontSize: '16px',
@@ -181,13 +184,21 @@ const Explore = () => {
 
       <div style={navbarStyles}>
         <div style={navLinkContainerStyles}>
-          <a href='#' style={navLinkStyles}>
+          <a onClick={() => navigate('/marketplace')} style={navLinkStyles}>
             Marketplace
           </a>
-          <a href='#' style={navLinkStyles}>
+          <a
+            href='#'
+            style={navLinkStyles}
+            onClick={() => navigate('/merchandise')}
+          >
             NFT Collection
           </a>
-          <a href='#' style={navLinkStyles}>
+          <a
+            href='#'
+            style={navLinkStyles}
+            onClick={() => navigate('/overview')}
+          >
             Overview
           </a>
         </div>

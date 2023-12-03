@@ -1,0 +1,84 @@
+.footer-container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 101px;
+  height: 300px; /* Set the desired height for the footer */
+}
+
+.left-content {
+  width: 261px;
+  font-size: 14px;
+}
+.right-content {
+  width: 263px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer-logo {
+  position: absolute;
+  top: -47px;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 100px; /* Set the maximum width for the logo */
+  max-height: 100px; /* Set the maximum height for the logo */
+}
+
+.footer-image {
+  width: 100%; /* Adjust width as needed */
+  height: 100%; /* Adjust height as needed */
+  object-fit: cover; /* Ensure the image covers the entire container */
+}
+
+/* .right-content nav {
+} */
+
+.right-content nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  font-size: 14px;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.right-content nav ul li {
+  cursor: pointer;
+  /* Add your styling for nav links */
+}
+
+.social-media {
+  display: flex;
+  margin: 11px 0px;
+  align-items: center;
+  justify-self: center;
+  flex-direction: row;
+}
+
+.social-media img {
+  margin-right: 10px;
+}
+
+.vector {
+  width: 127.49px;
+  height: 58.88px;
+}
+.footer-divider {
+  height: 1px;
+  background-color: white; /* Adjust divider color as needed */
+  width: 1209px;
+  margin: 0 auto;
+}
+
+.copyright-info {
+  font-size: 12px; /* Adjust font size as needed */
+  text-align: center;
+  display: flex;
+  width: 967px;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 30px 0 60px 0;
+}

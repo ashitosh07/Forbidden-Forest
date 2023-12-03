@@ -1,0 +1,25 @@
+/* OverviewPage.css */
+.overview-page {
+  background-image: url('../assets/Overviewbg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.overview-page button {
+  /* Add styles for the Explore button */
+  background-color: #2ecc71;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 20px; /* Adjust the margin as needed */
+}
+
+/* Add more styles as needed */
