@@ -2,7 +2,7 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom' // Use useNavigate instead of useHistory
 import Vector from '../assets/Vector.png'
 import MerchandiseWarrior from '../assets/MerchandiseWarrior.png'
-import comingsoon2 from '../assets/comingsoon2.png'
+import comingsoon2 from '../assets/ComingSoon2.png'
 import LogoTopLeft from '../assets/Vector.png'
 
 import tree from '../assets/tree.png'
