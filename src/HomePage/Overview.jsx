@@ -45,11 +45,19 @@ const Overview = () => {
           <span style={{ color: '#62EDED' }}>Forbidden Forest</span> Chronicles
         </h1>
         <p style={{ marginRight: '50px', width: '780px', margin: '40px 0' }}>
-          Lorem ipsum dolor sit amet consectetur. Imperdiet et arcu egestas a
-          tempus turpis arcu. Neque non nulla donec sagittis vestibulum semper
-          nec dignissim. Habitant odio vel malesuada egestas accumsan. Id cursus
-          adipiscing leo in hac id arcu mauris. Est elementum purus consectetur
-          amet enim sagittis. Pretium eget ipsum
+          These cabins transcend being mere NFTs; they are keys to unlocking a
+          world where adventure seamlessly intertwines. As the veil lifts,
+          participants will uncover eight distinct cabin variants, each
+          possessing its enigmatic allure. These cabins serve as more than
+          digital assets—they are the epicenter, the ignition of a narrative
+          that unfolds with every revelation. <br />
+          <br />
+          The forest, alive with whispers of secrets yet to be uncovered,
+          invites participants to join this exhilarating journey into the
+          Forbidden Forest. The cabin stands as the epicenter, ushering in a new
+          era of adventure. The future promises even more wonders, making this
+          journey a captivating exploration into the boundless realms of
+          creativity and discovery.
         </p>
         <div className='row'>
           {data.map((item, index) => (
@@ -65,7 +73,7 @@ const Overview = () => {
                 <img src={item.icon} alt={item.title} />
                 {/* <h2>{item.title}</h2> */}
               </div>
-              <p>{item.para}</p>
+              {/* <p>{item.para}</p> */}
             </div>
           ))}
           <div

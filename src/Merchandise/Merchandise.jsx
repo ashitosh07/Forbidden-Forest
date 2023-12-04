@@ -43,7 +43,7 @@ const Merchandise = () => {
   }
   const textStyle = {
     fontFamily: 'Syne',
-    marginTop: '10%',
+    // marginTop: '10%',
     fontSize: '40px',
     letterSpacing: '4px',
     textAlign: 'left',
@@ -128,7 +128,7 @@ const Merchandise = () => {
           className='tree'
           style={{ position: 'fixed', bottom: 0, left: 0, height: '70%' }}
         />
-        <div style={{ textAlign: 'left', marginLeft: '32px' }}>
+        {/* <div style={{ textAlign: 'left', marginLeft: '32px' }}>
           <p
             style={{
               marginBottom: '20px',
@@ -148,7 +148,7 @@ const Merchandise = () => {
 
             <button style={notifyButtonStyle}>Notify Me</button>
           </div>
-        </div>
+        </div> */}
         {/* Warriors */}
       </div>{' '}
       <div className='social-icons-column-merchandise'>

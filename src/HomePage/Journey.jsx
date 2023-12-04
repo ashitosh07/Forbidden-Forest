@@ -221,12 +221,12 @@ const Journey = () => {
                 <div style={cardTitle} className='row-container'>
                   <div className='left-content'>
                     <h3>{title}</h3>
-                    <p style={{ fontSize: '10px' }}>{para}</p>
+                    {/* <p style={{ fontSize: '10px' }}>{para}</p> */}
                   </div>
                   <div className='right-content'>
-                    <p style={{ fontSize: '13px', color: '#EEEE9A' }}>
+                    {/* <p style={{ fontSize: '13px', color: '#EEEE9A' }}>
                       See All
-                    </p>
+                    </p> */}
                   </div>
                 </div>
               </div>
