@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import sharedStyles, { GlobalStyles } from './JourneyStyles'
 import cutsword from '../assets/cutsword.png'
 import { cardData } from './Cards'
@@ -12,6 +12,59 @@ const Journey = () => {
   url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500&family=Mukta:wght@200&family=Mystery+Quest&family=Staatliches&family=Syne:wght@400;800&display=swap');
  @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500&family=Mukta:wght@200&family=Mystery+Quest&family=Proza+Libre&family=Staatliches&family=Syne:wght@400;800&display=swap');
 `
+
+  // Set the target date for the countdown (YYYY, MM - 1, DD, HH, mm, ss)
+  const targetDate = new Date(2023, 11, 31, 18, 30, 0)
+
+  const calculateTimeDifference = () => {
+    const now = new Date()
+    const difference = targetDate - now
+
+    if (difference > 0) {
+      const days = Math.floor(difference / (1000 * 60 * 60 * 24))
+      const hours = Math.floor(
+        (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+      )
+      const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60))
+      const seconds = Math.floor((difference % (1000 * 60)) / 1000)
+
+      setDays(days)
+      setHours(hours)
+      setMinutes(minutes)
+      setSeconds(seconds)
+    } else {
+      // Countdown is complete, you can handle this case as needed
+      setDays(0)
+      setHours(0)
+      setMinutes(0)
+      setSeconds(0)
+    }
+  }
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      // Update the time difference every second
+      calculateTimeDifference()
+    }, 1000)
+
+    // Clear the interval when the component is unmounted
+    return () => clearInterval(interval)
+  }, []) // Empty dependency array ensures that the effect runs only once on mount
+
+  const [days, setDays] = useState(0)
+  const [hours, setHours] = useState(0)
+  const [minutes, setMinutes] = useState(0)
+  const [seconds, setSeconds] = useState(0)
+
+  const renderDigits = (value) => {
+    // Convert the value to a string and split into individual digits
+    const digits = value.toString().split('')
+    return digits.map((digit, index) => (
+      <div key={index} style={styles.number}>
+        {digit}
+      </div>
+    ))
+  }
 
   const mainData = [
     { img: MarketplaceImage, title: 'Marketplace', logo: LogoImage },
@@ -282,7 +335,7 @@ const Journey = () => {
             </div>
           ))}
         </div>
-        <div style={styles.countdownContainer}>
+        {/* <div style={styles.countdownContainer}>
           <div style={styles.countdownItem}>
             <div style={styles.digitContainer}>
               <div style={styles.number}>2</div>
@@ -303,6 +356,24 @@ const Journey = () => {
               <div style={styles.number}>6</div>
             </div>
             <div style={styles.label}>Minutes</div>
+          </div>
+        </div> */}
+        <div style={styles.countdownContainer}>
+          <div style={styles.countdownItem}>
+            <div style={styles.digitContainer}>{renderDigits(days)}</div>
+            <div style={styles.label}>{days > 1 ? 'Days' : 'Day'}</div>
+          </div>
+          <div style={styles.countdownItem}>
+            <div style={styles.digitContainer}>{renderDigits(hours)}</div>
+            <div style={styles.label}>{hours > 1 ? 'Hours' : 'Hour'}</div>
+          </div>
+          <div style={styles.countdownItem}>
+            <div style={styles.digitContainer}>{renderDigits(minutes)}</div>
+            <div style={styles.label}>{minutes > 1 ? 'Minutes' : 'Minute'}</div>
+          </div>
+          <div style={styles.countdownItem}>
+            <div style={styles.digitContainer}>{renderDigits(seconds)}</div>
+            <div style={styles.label}>{seconds > 1 ? 'Seconds' : 'Second'}</div>
           </div>
         </div>
         {/* <div style={styles.emailContainer}>
