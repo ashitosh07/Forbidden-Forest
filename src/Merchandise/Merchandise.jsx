@@ -22,6 +22,7 @@ const fontStyles = `
 `
 
 const Merchandise = () => {
+  const navigate = useNavigate()
   const textBoxStyle = {
     padding: '15px ',
     width: '47%',
@@ -81,13 +82,25 @@ const Merchandise = () => {
       <style>{fontStyles}</style>
       <div style={navbarStyles}>
         <div style={navLinkContainerStyles}>
-          <a style={navLinkStyles}>Marketplace</a>
-          <a href='#' style={navLinkStyles}>
+          <a style={navLinkStyles} onClick={() => navigate('/marketplace')}>
+            Marketplace
+          </a>
+          <a style={navLinkStyles} onClick={() => navigate('/merchandise')}>
             NFT Collection
           </a>
-          <a href='#' style={navLinkStyles}>
+          <a style={navLinkStyles} onClick={() => navigate('/overview')}>
             Overview
           </a>
+
+          {/* <a onClick={() => navigate('/marketplace')} style={navLink}>
+            Marketplace
+          </a>
+          <a style={navLink} onClick={() => navigate('/merchandise')}>
+            NFT Collection
+          </a>
+          <a style={navLink} onClick={() => navigate('/overview')}>
+            Overview
+          </a> */}
         </div>
         <img src={LogoTopLeft} alt='Logo' style={logoStyles} />
       </div>
@@ -139,23 +152,23 @@ const Merchandise = () => {
         {/* Warriors */}
       </div>{' '}
       <div className='social-icons-column-merchandise'>
-        <img
+        {/* <img
           src={marketsocialfacebook}
           alt='marketsocialfacebook'
           className='social-icon-merchandise'
-        />
+        /> */}
         <img
           src={marketsocialtwitter}
           alt='marketsocialtwitter'
           className='social-icon-merchandise'
         />
         {/* Add more social icons as needed */}
-        <img
+        {/* <img
           src={marketsociallinkedln}
           alt='marketsociallinkedln'
           className='social-icon-merchandise'
-        />
-        <img
+        /> */}
+        {/* <img
           src={marketsocialinstagram}
           alt='marketsocialinstagram'
           className='social-icon-merchandise'
@@ -164,7 +177,7 @@ const Merchandise = () => {
           src={marketsocialweb}
           alt='marketsocialweb'
           className='social-icon-merchandise'
-        />
+        /> */}
         {/* ... Add more social icons as needed */}
       </div>
     </div>

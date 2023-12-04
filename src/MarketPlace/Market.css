@@ -38,7 +38,7 @@
   width: 781px;
   height: auto;
   padding-right: 97px;
-  margin-right: 100px;
+  margin-right: 14px;
 }
 
 .content-market h1 {
@@ -55,7 +55,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 20px 0;
+  margin: 20px 0 30px 0;
 }
 
 .social-icon {
@@ -69,14 +69,14 @@
   display: flex;
   z-index: 9990;
   /* justify-content: space-between; */
-  margin-top: 13%;
-  margin-left: 130px;
+  /* margin-top: 13%; */
+  margin-left: 52px;
 }
 
 /* Add styles for individual warrior images */
 .warrior-image {
   position: relative;
-  width: 24%;
+  width: 22%;
   margin-right: 10px;
 
   overflow: hidden;

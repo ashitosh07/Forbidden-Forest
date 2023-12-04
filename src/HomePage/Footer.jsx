@@ -7,6 +7,7 @@ import footertwitter from '../assets/footertwitter.png'
 import footertelegram from '../assets/footertelegram.png'
 import footerlinkedln from '../assets/footerlinkedln.png'
 import footerfacebook from '../assets/footerfacebook.png'
+import { Link } from 'react-router-dom'
 const Footer = () => {
   const fontStyles = `
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Lexend:wght@100;200;300;400;500&family=Mukta:wght@200&family=Mystery+Quest&family=Outfit&family=Poppins:ital,wght@0,200;0,300;1,200&family=Proza+Libre&family=Staatliches&family=Syne:wght@400;800&display=swap');
@@ -31,10 +32,10 @@ const Footer = () => {
               collections you love. Enjoy it!
             </p>
             <div className='social-media'>
-              <img src={footerfacebook} alt='footerfacebook' />
-              <img src={footertelegram} alt='footertelegram' />
+              {/* <img src={footerfacebook} alt='footerfacebook' /> */}
+              {/* <img src={footertelegram} alt='footertelegram' /> */}
               <img src={footertwitter} alt='footertwitter' />
-              <img src={footerlinkedln} alt='footerlinkedln' />
+              {/* <img src={footerlinkedln} alt='footerlinkedln' /> */}
             </div>
             {/* Add your social media icons here */}
           </div>
@@ -43,11 +44,66 @@ const Footer = () => {
             <img src={FooterLogo} alt='Footer Logo' className='footer-logo' />
             <nav>
               <ul>
-                <li style={{ fontWeight: 'bold' }}>Explore</li>
-                <li>NFT Journey</li>
-                <li>Coming Soon</li>
-                <li>Overview</li>
-                <li>Social Feed</li>
+                <li style={{ fontWeight: 'bold', cursor: 'pointer' }}>
+                  <Link
+                    to='/explore'
+                    style={{
+                      textDecoration: 'none',
+                      color: 'inherit',
+                      fontSize: '13px',
+                    }}
+                  >
+                    Explore
+                  </Link>
+                </li>
+                <li style={{ cursor: 'pointer' }}>
+                  <Link
+                    to='/nft-journey'
+                    style={{
+                      textDecoration: 'none',
+                      color: 'inherit',
+                      fontSize: '13px',
+                    }}
+                  >
+                    NFT Journey
+                  </Link>
+                </li>
+                <li style={{ cursor: 'pointer' }}>
+                  <Link
+                    to='/coming-soon'
+                    style={{
+                      textDecoration: 'none',
+                      color: 'inherit',
+                      fontSize: '13px',
+                    }}
+                  >
+                    Coming Soon
+                  </Link>
+                </li>
+                <li style={{ cursor: 'pointer' }}>
+                  <Link
+                    to='/overview'
+                    style={{
+                      textDecoration: 'none',
+                      color: 'inherit',
+                      fontSize: '13px',
+                    }}
+                  >
+                    Overview
+                  </Link>
+                </li>
+                <li style={{ cursor: 'pointer' }}>
+                  <Link
+                    to='/social-feed'
+                    style={{
+                      textDecoration: 'none',
+                      color: 'inherit',
+                      fontSize: '13px',
+                    }}
+                  >
+                    Social Feed
+                  </Link>
+                </li>
               </ul>
             </nav>
             <img src={Vector} alt='Vector' className='vector' />

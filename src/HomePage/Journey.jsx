@@ -167,9 +167,10 @@ const Journey = () => {
                       fontWeight: 'bold',
                     }}
                   >
-                    60
+                    6K
                   </span>
-                  K <br />
+                  +
+                  <br />
                   <span
                     style={{
                       fontSize: '15px',
@@ -187,14 +188,14 @@ const Journey = () => {
             style={{ textAlign: 'center', fontSize: '16px', marginTop: '50px' }}
           >
             <p>
-              Embark on a captivating NFT journey with "The Forbidden Forest."
-              Witness the grand reveal of 6,000 unique cabins, each paired with
-              a random avatar. These cabins serve as the focal point in an
-              immersive metaverse game, promising a blend of art and adventure.
-              Uncover seven distinct cabin variants, each a surprise in its own
-              right, as we count down to an extraordinary unveiling. The forest
-              beckons, inviting you to explore a world where creativity knows no
-              bounds.
+              Embark on an enchanting NFT journey with "The Forbidden Forest,"
+              featuring 6,000 + unique cabins at the heart of the grand reveal.
+              Each cabin stands as a cornerstone, a unique canvas for creativity
+              and adventure. Uncover seven distinct cabin variants, each holding
+              its own surprises, as we count down to an extraordinary unveiling.
+              The forest beckons, inviting you to explore a world where
+              imagination knows no bounds, with these cabins as the foundational
+              pieces of this extraordinary experience.
             </p>
           </div>
         </div>
@@ -304,21 +305,21 @@ const Journey = () => {
             <div style={styles.label}>Minutes</div>
           </div>
         </div>
-        <div style={styles.emailContainer}>
+        {/* <div style={styles.emailContainer}>
           <p style={{ marginBottom: '20px', fontFamily: 'Proza+Libre' }}>
             We’ll let you know when we are Launching
           </p>
           <div style={{ marginBottom: '6%' }}>
-            {/* Your text box goes here */}
+           
             <input
               type='text'
               placeholder='Email Address'
               style={textBoxStyle}
             />
-            {/* Your "Notify Me" button goes here */}
+           
             <button style={notifyButtonStyle}>Notify Me</button>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   )

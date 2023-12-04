@@ -4,6 +4,7 @@ import OverviewImage from '../assets/Overview.png'
 import money from '../assets/money.png'
 import airdrop from '../assets/airdrop.png'
 import airicon from '../assets/airicon.png'
+import comingsoon from '../assets/comingsoon2.png'
 
 const Overview = () => {
   const fontStyles = `
@@ -62,7 +63,7 @@ const Overview = () => {
                 }}
               >
                 <img src={item.icon} alt={item.title} />
-                <h2>{item.title}</h2>
+                {/* <h2>{item.title}</h2> */}
               </div>
               <p>{item.para}</p>
             </div>
@@ -84,11 +85,16 @@ const Overview = () => {
           >
             <img src={airicon} alt='' style={{ margin: '0 auto' }} />
             <h3 style={{ fontFamily: 'Outfit' }}>Connect your Airdrop</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur. Imperdiet et arcu egestas
-              a tempus turpis arcu. Neque non nulla donec sagittis vestibulum
-              semper nec dignissim
-            </p>
+            <img
+              src={comingsoon}
+              alt='comingsoon'
+              style={{
+                width: '100%',
+                textAlign: 'left',
+                marginRight: '157px',
+                marginTop: '30px',
+              }}
+            />
           </div>
         </div>
       </div>

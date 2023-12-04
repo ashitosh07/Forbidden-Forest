@@ -95,11 +95,11 @@ const Forest = () => {
           Stay Connected with{' '}
           <span style={{ color: '#62EDED' }}>The Forbidden Forest</span>
         </h1>
-        <p>
+        {/* <p>
           Lorem ipsum dolor sit amet consectetur. Imperdiet et arcu egestas a
           tempus turpis arcu. Neque non nulla donec sagittis vestibulum semper
           nec.
-        </p>
+        </p> */}
       </div>
       <Carousel />
       <Carouseltwo />

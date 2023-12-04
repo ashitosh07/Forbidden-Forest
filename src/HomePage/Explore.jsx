@@ -52,7 +52,7 @@ const Explore = () => {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    padding: '20px 12px',
+    padding: '30px 12px',
     width: 'auto', // Let the width adjust to content
   }
 
@@ -78,7 +78,7 @@ const Explore = () => {
     alignItems: 'center',
   }
 
-  const navLinkStyles = {
+  const navLink = {
     color: 'white',
     cursor: 'pointer',
     textDecoration: 'none',
@@ -169,7 +169,7 @@ const Explore = () => {
       <div style={socialMediaOverlayStyles}>
         {/* Add your social media icons here */}
         <img src={twitterIcon} alt='Twitter' style={socialMediaIconStyles} />
-        <img
+        {/* <img
           src={instagramIcon}
           alt='Instagram'
           style={socialMediaIconStyles}
@@ -179,26 +179,18 @@ const Explore = () => {
           src={facebookIcon}
           alt='Facebook'
           style={{ width: '13px', height: 'auto', margin: '5px' }}
-        />
+        /> */}
       </div>
 
       <div style={navbarStyles}>
         <div style={navLinkContainerStyles}>
-          <a onClick={() => navigate('/marketplace')} style={navLinkStyles}>
+          <a onClick={() => navigate('/marketplace')} style={navLink}>
             Marketplace
           </a>
-          <a
-            href='#'
-            style={navLinkStyles}
-            onClick={() => navigate('/merchandise')}
-          >
+          <a style={navLink} onClick={() => navigate('/merchandise')}>
             NFT Collection
           </a>
-          <a
-            href='#'
-            style={navLinkStyles}
-            onClick={() => navigate('/overview')}
-          >
+          <a style={navLink} onClick={() => navigate('/overview')}>
             Overview
           </a>
         </div>

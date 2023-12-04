@@ -97,7 +97,7 @@ const sharedStyles = {
 
   cutswordContainer: {
     position: 'absolute',
-    top: '50%',
+    top: '23%',
     left: '5%',
     transform: 'translate(-50%, -50%)',
     width: '10%',

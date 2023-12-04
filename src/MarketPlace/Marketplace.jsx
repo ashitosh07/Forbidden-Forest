@@ -64,19 +64,6 @@ const Marketplace = () => {
     fontSize: '16px',
     fontFamily: 'Proza+Libre',
   }
-  const splitText = (text) => {
-    return text.split('\n').map((line, index) => (
-      <React.Fragment key={index}>
-        {index > 0 && <br />}
-        {line}
-      </React.Fragment>
-    ))
-  }
-
-  const handleButtonClick = () => {
-    // Redirect to /home when the button is clicked
-    navigate('/home')
-  }
 
   return (
     <div className='market-screen'>
@@ -86,11 +73,13 @@ const Marketplace = () => {
       </div>
       <div style={navbarStyles}>
         <div style={navLinkContainerStyles}>
-          <a style={navLinkStyles}>Marketplace</a>
-          <a href='#' style={navLinkStyles}>
+          <a href='/marketplace' style={navLinkStyles}>
+            Marketplace
+          </a>
+          <a href='/merchandise' style={navLinkStyles}>
             NFT Collection
           </a>
-          <a href='#' style={navLinkStyles}>
+          <a href='/overview' style={navLinkStyles}>
             Overview
           </a>
         </div>
@@ -112,7 +101,7 @@ const Marketplace = () => {
             width: '80%',
             textAlign: 'left',
             marginRight: '157px',
-            marginTop: '30px',
+            marginTop: '10px',
           }}
         />
         <img
@@ -127,18 +116,18 @@ const Marketplace = () => {
           <img src={marketdiscord} alt='Warrior 2' className='social-icon' />
         </div>
         <div className='social-icons-column'>
-          <img
+          {/* <img
             src={marketsocialfacebook}
             alt='marketsocialfacebook'
             className='social-icon-market'
-          />
+          /> */}
           <img
             src={marketsocialtwitter}
             alt='marketsocialtwitter'
             className='social-icon-market'
           />
           {/* Add more social icons as needed */}
-          <img
+          {/* <img
             src={marketsociallinkedln}
             alt='marketsociallinkedln'
             className='social-icon-market'
@@ -152,7 +141,7 @@ const Marketplace = () => {
             src={marketsocialweb}
             alt='marketsocialweb'
             className='social-icon-market'
-          />
+          /> */}
           {/* ... Add more social icons as needed */}
         </div>
         {/* Warriors */}
