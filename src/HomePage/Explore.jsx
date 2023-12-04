@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import homepage from '../assets/homepage2.png'
 import sword from '../assets/sword2.png'
 import overlay from '../assets/overlay.png'
@@ -10,15 +10,41 @@ import discordIcon from '../assets/discord.png'
 import rectangle from '../assets/Rectangle.png'
 import button from '../assets/Button.png'
 import explorebtn from '../assets/explorebtn.png'
-import { useNavigate } from 'react-router-dom' // Use useNavigate instead of useHistory
+import { useNavigate } from 'react-router-dom'
+import { useAnimation } from '../AnimationContext.jsx'
+import swordanimate from '../assets/Sword.png'
 const Explore = () => {
+  const { isSwordAnimating, resetSwordAnimation } = useAnimation()
+  const [isSwordVisible, setIsSwordVisible] = useState(true)
   const navigate = useNavigate() // useNavigate for navigation
+
+  useEffect(() => {
+    if (isSwordAnimating) {
+      // Perform any additional animations or logic here
+      setTimeout(() => {
+        resetSwordAnimation()
+        setIsSwordVisible(false) // Hide the sword after the animation
+      }, 10) // Change the duration as needed
+    }
+  }, [isSwordAnimating, resetSwordAnimation])
+
+  // useNavigate for navigation
   const fontStyles = `
   @import
   url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500&family=Mukta:wght@200&family=Mystery+Quest&family=Staatliches&family=Syne:wght@400;800&display=swap');
  @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500&family=Mukta:wght@200&family=Mystery+Quest&family=Proza+Libre&family=Staatliches&family=Syne:wght@400;800&display=swap');
 `
-
+  const swordanimateStyles = {
+    width: '60%',
+    height: 'auto',
+    position: 'absolute',
+    bottom: 0,
+    right: isSwordAnimating ? '50%' : 0, // Move the sword to the right when animating
+    transition: 'all 0.5s ease',
+    zIndex: 2,
+    visibility: isSwordVisible ? 'visible' : 'hidden',
+    // Add any other styling properties you need
+  }
   const containerStyles = {
     position: 'relative',
     backgroundImage: `url(${homepage})`,
@@ -181,7 +207,7 @@ const Explore = () => {
           style={{ width: '13px', height: 'auto', margin: '5px' }}
         /> */}
       </div>
-
+      <img src={swordanimate} alt='Sword' style={swordanimateStyles} />
       <div style={navbarStyles}>
         <div style={navLinkContainerStyles}>
           <a onClick={() => navigate('/marketplace')} style={navLink}>

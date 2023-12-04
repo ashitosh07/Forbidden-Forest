@@ -4,14 +4,16 @@ import IntroImage from '../assets/Intro.png'
 import SwordsmenImage from '../assets/Swordsmen.png'
 import EpicButtonImage from '../assets/epicButton.png'
 import LogoTopLeft from '../assets/Vector.png'
+import Sword from '../assets/Sword.png'
 import './IntroScreen.css'
-
+import { useAnimation } from '../AnimationContext.jsx'
 const fontStyles = `
   @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500&family=Mukta:wght@200&family=Staatliches&display=swap');
 `
 
 const IntroScreen = () => {
-  const navigate = useNavigate() // useNavigate for navigation
+  const { startSwordAnimation, isSwordAnimating } = useAnimation()
+  const navigate = useNavigate()
 
   const textStyle = {
     fontFamily: 'Mystery Quest',
@@ -30,14 +32,18 @@ const IntroScreen = () => {
   }
 
   const handleButtonClick = () => {
+    startSwordAnimation()
     // Redirect to /home when the button is clicked
-    navigate('/home')
+    setTimeout(() => {
+      navigate('/home')
+    }, 100) // Change the duration as needed
   }
 
   return (
-    <div className='intro-screen'>
+    <div className={`intro-screen ${isSwordAnimating ? 'animate-sword' : ''}`}>
       <style>{fontStyles}</style>
       <img src={SwordsmenImage} alt='Swordsmen' className='swordsmen' />
+      <img src={Sword} alt='Swordsmen' className='Sword' />
       <img src={LogoTopLeft} alt='Top Left Logo' className='logo-top-left' />
       <div className='content'>
         <p style={textStyle}>
