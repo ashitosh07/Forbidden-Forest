@@ -4,7 +4,7 @@ import OverviewImage from '../assets/Overview.png'
 import money from '../assets/money.png'
 import airdrop from '../assets/airdrop.png'
 import airicon from '../assets/airicon.png'
-import comingsoon from '../assets/comingsoon2.png'
+import comingsoon from '../assets/ComingSoon2.png'
 
 const Overview = () => {
   const fontStyles = `
