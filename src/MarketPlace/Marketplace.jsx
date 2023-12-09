@@ -83,6 +83,9 @@ const Marketplace = () => {
           </a>
           <a href='/overview' style={navLinkStyles}>
             Overview
+          </a>{' '}
+          <a href='/home' style={navLinkStyles}>
+            Home
           </a>
         </div>
         <img src={LogoTopLeft} alt='Logo' style={logoStyles} />

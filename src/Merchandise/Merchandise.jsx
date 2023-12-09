@@ -91,7 +91,9 @@ const Merchandise = () => {
           <a style={navLinkStyles} onClick={() => navigate('/overview')}>
             Overview
           </a>
-
+          <a style={navLinkStyles} onClick={() => navigate('/home')}>
+            Home
+          </a>
           {/* <a onClick={() => navigate('/marketplace')} style={navLink}>
             Marketplace
           </a>

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import homepage from '../assets/homepage2.png'
 import sword from '../assets/sword2.png'
 import overlay from '../assets/overlay.png'
@@ -14,6 +14,36 @@ import { useNavigate } from 'react-router-dom'
 import { useAnimation } from '../AnimationContext.jsx'
 import swordanimate from '../assets/Sword.png'
 const Explore = () => {
+  const exploreButtonRef = useRef(null)
+  const [isClicked, setIsClicked] = useState(false)
+  const handleExploreClick = () => {
+    setIsClicked(true)
+    // Get the current position of the element
+    const exploreButtonPosition = exploreButtonRef.current.offsetTop
+
+    // Scroll smoothly to the element
+    window.scrollTo({
+      top: exploreButtonPosition + 1000,
+      behavior: 'smooth',
+    })
+  }
+
+  useEffect(() => {
+    const buttonRef = exploreButtonRef.current
+
+    if (buttonRef) {
+      // Add event listener when the component mounts
+      buttonRef.addEventListener('click', handleExploreClick)
+
+      // Clean up the event listener when the component unmounts
+      return () => {
+        buttonRef.removeEventListener('click', handleExploreClick)
+      }
+    }
+
+    // If exploreButtonRef.current is null, do nothing
+  }, []) // Empty dependency array ensures the effect runs only once during mount
+
   const { isSwordAnimating, resetSwordAnimation } = useAnimation()
   const [isSwordVisible, setIsSwordVisible] = useState(true)
   const navigate = useNavigate() // useNavigate for navigation
@@ -123,6 +153,16 @@ const Explore = () => {
 
   const exploreButtonStyles = {
     width: '150px',
+    ':hover': {
+      border: '2px solid blue',
+      // Add any other styles for hover
+    },
+
+    // ...(isClicked && {
+    //   // Styles to apply when the button is clicked
+    //   border: '2px solid red',
+    //   // Add any other styles you want to change on click
+    // }),
   }
 
   const contentWrapperStyles = {
@@ -233,7 +273,12 @@ const Explore = () => {
         </div>
         <img src={LogoTopLeft} alt='Logo' style={logoStyles} />
         {/* <button style={exploreButtonStyles}>Explore</button>{' '} */}
-        <img src={explorebtn} alt='explorebtn' style={exploreButtonStyles} />
+        <img
+          ref={exploreButtonRef}
+          src={explorebtn}
+          alt='explorebtn'
+          style={exploreButtonStyles}
+        />
       </div>
 
       <div style={contentWrapperStyles}>
@@ -255,9 +300,7 @@ const Explore = () => {
             src={button}
             alt='button'
             style={buttonStyles}
-            onClick={() => {
-              alert('Hello, World!')
-            }}
+            onClick={() => navigate('/overview')}
           />
         </div>
         <img src={sword} alt='Sword' style={swordStyles} />

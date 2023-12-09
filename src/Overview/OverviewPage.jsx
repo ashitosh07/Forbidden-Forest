@@ -1,5 +1,5 @@
 // OverviewPage.jsx
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import './Styles.css'
 import Overviewbg from '../assets/Overviewbg.png'
 import explorebtn from '../assets/explorebtn.png'
@@ -17,6 +17,36 @@ import footerlinkedln from '../assets/footerlinkedln.png'
 import footerfacebook from '../assets/footerfacebook.png'
 import { Link } from 'react-router-dom'
 const OverviewPage = () => {
+  const exploreButtonRef = useRef(null)
+  const [isClicked, setIsClicked] = useState(false)
+  const handleExploreClick = () => {
+    setIsClicked(true)
+    // Get the current position of the element
+    const exploreButtonPosition = exploreButtonRef.current.offsetTop
+
+    // Scroll smoothly to the element
+    window.scrollTo({
+      top: exploreButtonPosition + 1000,
+      behavior: 'smooth',
+    })
+  }
+
+  useEffect(() => {
+    const buttonRef = exploreButtonRef.current
+
+    if (buttonRef) {
+      // Add event listener when the component mounts
+      buttonRef.addEventListener('click', handleExploreClick)
+
+      // Clean up the event listener when the component unmounts
+      return () => {
+        buttonRef.removeEventListener('click', handleExploreClick)
+      }
+    }
+
+    // If exploreButtonRef.current is null, do nothing
+  }, [])
+
   const fontStyles = `
   @import
   url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500&family=Mukta:wght@200&family=Mystery+Quest&family=Staatliches&family=Syne:wght@400;800&display=swap');
@@ -241,11 +271,19 @@ const OverviewPage = () => {
           </a>
           <a href='/overview' style={navLinkStyles}>
             Overview
+          </a>{' '}
+          <a href='/home' style={navLinkStyles}>
+            Home
           </a>
         </div>
         <img src={LogoTopLeft} alt='Logo' style={logoStyles} />
         {/* Use a button for better accessibility */}{' '}
-        <img src={explorebtn} alt='Logo' style={exploreButtonStyles} />
+        <img
+          ref={exploreButtonRef}
+          src={explorebtn}
+          alt='explorebtn'
+          style={exploreButtonStyles}
+        />
         {/* <button style={exploreButtonStyles}>Explore</button> */}
       </div>
       <div style={centerContentStyles}>
