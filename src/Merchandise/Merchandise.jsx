@@ -157,10 +157,15 @@ const Merchandise = () => {
           alt='marketsocialfacebook'
           className='social-icon-merchandise'
         /> */}
+
         <img
-          src={marketsocialtwitter}
+          src={marketsocialtwitter} // Replace with the actual path to your Twitter icon image file
           alt='marketsocialtwitter'
           className='social-icon-merchandise'
+          onClick={() => {
+            window.location.href =
+              'https://x.com/forestcabin?s=21&t=YWp5Aaik1QyDnA9tnXj6yg'
+          }}
         />
         {/* Add more social icons as needed */}
         {/* <img

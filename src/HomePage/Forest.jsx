@@ -17,6 +17,7 @@ const Forest = () => {
   const textBoxStyle = {
     padding: '10px ',
     width: '50%',
+    color: 'white',
     backgroundColor: '#131E3A',
     fontFamily: 'Poppins',
     borderRadius: '8px',

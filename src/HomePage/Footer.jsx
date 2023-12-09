@@ -34,9 +34,20 @@ const Footer = () => {
             <div className='social-media'>
               {/* <img src={footerfacebook} alt='footerfacebook' /> */}
               {/* <img src={footertelegram} alt='footertelegram' /> */}
-              <img src={footertwitter} alt='footertwitter' />
+
+              <img
+                src={footertwitter} // Replace with the actual path to your Twitter icon image file
+                alt='footertwitter'
+                style={{ cursor: 'pointer' }}
+                onClick={() => {
+                  window.location.href =
+                    'https://x.com/forestcabin?s=21&t=YWp5Aaik1QyDnA9tnXj6yg'
+                }}
+              />
+
               {/* <img src={footerlinkedln} alt='footerlinkedln' /> */}
             </div>
+            <p>Support@theforbiddenforest.net</p>
             {/* Add your social media icons here */}
           </div>
 

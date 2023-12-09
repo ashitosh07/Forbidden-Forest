@@ -102,22 +102,13 @@
   background-repeat: no-repeat;
 }
 
-.forbidden-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 9000; /* Make sure it's on top of other elements */
-  overflow: hidden;
-}
-
 .forbidden-image {
-  width: 162%;
+  width: 110%;
   height: auto;
   position: absolute;
-  top: 67%;
-  left: 83%;
+  top: 61%;
+  left: 56%;
+
   transform: translate(-50%, -50%);
 }
 /* Add this to your Market.css file */

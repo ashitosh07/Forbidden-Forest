@@ -19,14 +19,14 @@ const Explore = () => {
   const navigate = useNavigate() // useNavigate for navigation
 
   useEffect(() => {
-    if (isSwordAnimating) {
+    if (isSwordAnimating || !isSwordAnimating) {
       // Perform any additional animations or logic here
       setTimeout(() => {
         resetSwordAnimation()
         setIsSwordVisible(false) // Hide the sword after the animation
-      }, 10) // Change the duration as needed
+      }, 1)
     }
-  }, [isSwordAnimating, resetSwordAnimation])
+  }, [])
 
   // useNavigate for navigation
   const fontStyles = `
@@ -67,6 +67,7 @@ const Explore = () => {
     left: 0,
     width: '100%',
     height: '100%',
+    pointerEvents: 'none',
   }
 
   const socialMediaOverlayStyles = {
@@ -85,6 +86,7 @@ const Explore = () => {
   const socialMediaIconStyles = {
     width: '20px', // Adjust the width of the social media icons
     height: 'auto',
+    cursor: 'pointer',
     margin: '5px',
   }
 
@@ -174,7 +176,7 @@ const Explore = () => {
   const buttonStyles = {
     // padding: '6px 14px',
     fontSize: '12px',
-    width: '20%',
+    width: '35%',
     border: 'none',
     borderRadius: '6px',
     color: 'black',
@@ -186,6 +188,7 @@ const Explore = () => {
     left: 0,
     width: '100%',
     height: 'auto',
+    pointerEvents: 'none',
   }
 
   return (
@@ -194,7 +197,15 @@ const Explore = () => {
       <style>{fontStyles}</style>
       <div style={socialMediaOverlayStyles}>
         {/* Add your social media icons here */}
-        <img src={twitterIcon} alt='Twitter' style={socialMediaIconStyles} />
+        <img
+          src={twitterIcon} // Replace with the actual path to your Twitter icon image file
+          alt='Twitter'
+          style={socialMediaIconStyles} // Add your icon styles here
+          onClick={() => {
+            window.location.href =
+              'https://x.com/forestcabin?s=21&t=YWp5Aaik1QyDnA9tnXj6yg'
+          }}
+        />
         {/* <img
           src={instagramIcon}
           alt='Instagram'
@@ -240,7 +251,14 @@ const Explore = () => {
             NFT experience.
           </p>
           {/* <button style={buttonStyles}>Enter Forest</button>{' '} */}
-          <img src={button} alt='button' style={buttonStyles} />
+          <img
+            src={button}
+            alt='button'
+            style={buttonStyles}
+            onClick={() => {
+              alert('Hello, World!')
+            }}
+          />
         </div>
         <img src={sword} alt='Sword' style={swordStyles} />
       </div>

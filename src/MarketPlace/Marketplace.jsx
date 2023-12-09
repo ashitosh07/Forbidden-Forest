@@ -45,6 +45,7 @@ const Marketplace = () => {
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
+    zIndex: '1',
     padding: '8px',
     width: '90%',
     position: 'absolute',
@@ -60,6 +61,7 @@ const Marketplace = () => {
     color: 'white',
     cursor: 'pointer',
     textDecoration: 'none',
+    zIndex: '1',
     margin: '0 20px',
     fontSize: '16px',
     fontFamily: 'Proza+Libre',
@@ -112,7 +114,15 @@ const Marketplace = () => {
         />
         {/* Social Media Icons */}
         <div className='social-icons'>
-          <img src={markettwitter} className='social-icon' />
+          <img
+            src={markettwitter} // Replace with the actual path to your Twitter icon image file
+            alt='markettwitter'
+            className='social-icon'
+            onClick={() => {
+              window.location.href =
+                'https://x.com/forestcabin?s=21&t=YWp5Aaik1QyDnA9tnXj6yg'
+            }}
+          />
           <img src={marketdiscord} alt='Warrior 2' className='social-icon' />
         </div>
         <div className='social-icons-column'>
@@ -125,7 +135,12 @@ const Marketplace = () => {
             src={marketsocialtwitter}
             alt='marketsocialtwitter'
             className='social-icon-market'
+            onClick={() => {
+              window.location.href =
+                'https://x.com/forestcabin?s=21&t=YWp5Aaik1QyDnA9tnXj6yg'
+            }}
           />
+
           {/* Add more social icons as needed */}
           {/* <img
             src={marketsociallinkedln}
