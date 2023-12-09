@@ -92,10 +92,10 @@ const Forest = () => {
         }}
       >
         {/* Your content goes here */}
-        <h1 style={{ fontFamily: 'Syne', marginBottom: '10px' }}>
+        {/* <h1 style={{ fontFamily: 'Syne', marginBottom: '10px' }}>
           Stay Connected with{' '}
           <span style={{ color: '#62EDED' }}>The Forbidden Forest</span>
-        </h1>
+        </h1> */}
         {/* <p>
           Lorem ipsum dolor sit amet consectetur. Imperdiet et arcu egestas a
           tempus turpis arcu. Neque non nulla donec sagittis vestibulum semper
