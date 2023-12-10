@@ -41,7 +41,22 @@ const IntroScreen = () => {
 
   return (
     <div className={`intro-screen ${isSwordAnimating ? 'animate-sword' : ''}`}>
-      <style>{fontStyles}</style>
+      <style>{fontStyles}</style>{' '}
+      <div
+        style={{
+          position: 'fixed',
+          top: '10px',
+          right: '20px',
+
+          color: '#fff',
+          padding: '8px 12px',
+          borderRadius: '5px',
+          fontSize: '16px',
+          fontWeight: 'bold',
+        }}
+      >
+        Website in Beta
+      </div>
       <img src={SwordsmenImage} alt='Swordsmen' className='swordsmen' />
       <img src={Sword} alt='Swordsmen' className='Sword' />
       <img src={LogoTopLeft} alt='Top Left Logo' className='logo-top-left' />

@@ -95,7 +95,22 @@ const Banner = () => {
           <p style={{ fontFamily: 'Mystery Quest', fontSize: '36px' }}>
             BEYOND THE VEIL LIES THE <br /> FORBIDDEN FOREST
           </p>
-        </motion.div>
+        </motion.div>{' '}
+        <div
+          style={{
+            position: 'fixed',
+            top: '10px',
+            right: '20px',
+
+            color: '#fff',
+            padding: '8px 12px',
+            borderRadius: '5px',
+            fontSize: '16px',
+            fontWeight: 'bold',
+          }}
+        >
+          Website in Beta
+        </div>
         <img src={LogoTopLeft} alt='Top Left Logo' style={logoTopLeftStyle} />
         <a href='/intro' onClick={redirectToIntroScreen}>
           <img

@@ -69,7 +69,22 @@ const Marketplace = () => {
 
   return (
     <div className='market-screen'>
-      <style>{fontStyles}</style>
+      <style>{fontStyles}</style>{' '}
+      <div
+        style={{
+          position: 'absolute',
+          top: '70px',
+          right: '20px',
+
+          color: '#fff',
+          padding: '8px 12px',
+          borderRadius: '5px',
+          fontSize: '16px',
+          fontWeight: 'bold',
+        }}
+      >
+        Website in Beta
+      </div>
       <div className='forbidden-overlay'>
         <img src={Forbidden} alt='Forbidden' className='forbidden-image' />
       </div>

@@ -234,7 +234,22 @@ const Explore = () => {
   return (
     <div style={containerStyles}>
       <div style={overlayStyles}></div>
-      <style>{fontStyles}</style>
+      <style>{fontStyles}</style>{' '}
+      <div
+        style={{
+          position: 'absolute',
+          top: '70px',
+          right: '20px',
+
+          color: '#fff',
+          padding: '8px 12px',
+          borderRadius: '5px',
+          fontSize: '16px',
+          fontWeight: 'bold',
+        }}
+      >
+        Website in Beta
+      </div>
       <div style={socialMediaOverlayStyles}>
         {/* Add your social media icons here */}
         <img
@@ -280,7 +295,6 @@ const Explore = () => {
           style={exploreButtonStyles}
         />
       </div>
-
       <div style={contentWrapperStyles}>
         <div style={contentStyles}>
           <h2 style={subHeadingStyles}>Explore and Experience</h2>
@@ -305,7 +319,6 @@ const Explore = () => {
         </div>
         <img src={sword} alt='Sword' style={swordStyles} />
       </div>
-
       <img src={overlay} alt='Overlay' style={overlayBottomStyles} />
     </div>
   )

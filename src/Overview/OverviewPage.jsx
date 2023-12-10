@@ -54,7 +54,7 @@ const OverviewPage = () => {
   @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500&family=Mukta:wght@200&family=Mystery+Quest&family=Proza+Libre&family=Staatliches&family=Syne:wght@400;800&display=swap');@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500&family=Mukta:wght@200&family=Mystery+Quest&family=Outfit&family=Poppins:ital,wght@0,200;0,300;1,200&family=Proza+Libre&family=Staatliches&family=Syne:wght@400;800&display=swap');
 `
   // Set the target date for the countdown (YYYY, MM - 1, DD, HH, mm, ss)
-  const targetDate = new Date(2023, 11, 31, 18, 30, 0)
+  const targetDate = new Date(2024, 0, 13, 17, 0, 0)
 
   const calculateTimeDifference = () => {
     const now = new Date()
@@ -259,7 +259,22 @@ const OverviewPage = () => {
   return (
     <div className='overview-page'>
       {' '}
-      <style>{fontStyles}</style>
+      <style>{fontStyles}</style>{' '}
+      <div
+        style={{
+          position: 'absolute',
+          top: '70px',
+          right: '20px',
+
+          color: '#fff',
+          padding: '8px 12px',
+          borderRadius: '5px',
+          fontSize: '16px',
+          fontWeight: 'bold',
+        }}
+      >
+        Website in Beta
+      </div>
       <div style={navbarStyles}>
         <div style={navLinkContainerStyles}>
           {/* Use <Link> from 'react-router-dom' for navigation */}
@@ -420,7 +435,7 @@ const OverviewPage = () => {
             <div style={styles.label}>{seconds > 1 ? 'Seconds' : 'Second'}</div>
           </div>
         </div>
-        <div
+        {/* <div
           style={{
             width: '300px',
             textAlign: 'center',
@@ -438,7 +453,7 @@ const OverviewPage = () => {
               alignItems: 'center',
             }}
           >
-            {/* Your text box goes here */}
+           
             <input
               type='text'
               placeholder='Email Address'
@@ -450,10 +465,10 @@ const OverviewPage = () => {
                 border: '1px solid #ccc',
                 borderRadius: '5px',
                 fontSize: '14px',
-                margin: '0', // Set margin to 0
+                margin: '0', 
               }}
             />
-            {/* Your "Notify Me" button goes here */}
+           
             <button
               style={{
                 backgroundColor: '#4DC2C0',
@@ -465,13 +480,13 @@ const OverviewPage = () => {
                 fontSize: '14px',
                 width: '124px',
                 height: '39px',
-                margin: '0', // Set margin to 0
+                margin: '0', 
               }}
             >
               Notify Me
             </button>
           </div>
-        </div>
+        </div> */}
       </div>
       <div style={{ fontFamily: 'Inter' }}>
         <div className='footer-container'>

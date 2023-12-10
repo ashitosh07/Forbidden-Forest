@@ -79,7 +79,22 @@ const Merchandise = () => {
 
   return (
     <div className='merchandise-screen'>
-      <style>{fontStyles}</style>
+      <style>{fontStyles}</style>{' '}
+      <div
+        style={{
+          position: 'absolute',
+          top: '70px',
+          right: '20px',
+
+          color: '#fff',
+          padding: '8px 12px',
+          borderRadius: '5px',
+          fontSize: '16px',
+          fontWeight: 'bold',
+        }}
+      >
+        Website in Beta
+      </div>
       <div style={navbarStyles}>
         <div style={navLinkContainerStyles}>
           <a style={navLinkStyles} onClick={() => navigate('/marketplace')}>

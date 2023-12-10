@@ -14,7 +14,8 @@ const Journey = () => {
 `
 
   // Set the target date for the countdown (YYYY, MM - 1, DD, HH, mm, ss)
-  const targetDate = new Date(2023, 11, 31, 18, 30, 0)
+  // const targetDate = new Date(2023, 11, 31, 18, 30, 0)
+  const targetDate = new Date(2024, 0, 13, 17, 0, 0)
 
   const calculateTimeDifference = () => {
     const now = new Date()
@@ -98,7 +99,13 @@ const Journey = () => {
   }
 
   // Add appropriate styling for other components as needed
+  const commonStyle = {
+    fontSize: '60px',
+    fontWeight: 'bold',
+    fontFamily: 'Syne',
 
+    // marginBottom: '5%',
+  }
   const backgroundImageStyle = {
     backgroundImage: `url(${bg3})`, // Use template literal to include the image path
 
@@ -280,12 +287,38 @@ const Journey = () => {
                     {/* <p style={{ fontSize: '13px', color: '#EEEE9A' }}>
                       See All
                     </p> */}
+                    <a
+                      href='https://opensea.io/TheForbiddenForest'
+                      target='_blank'
+                      rel='noopener noreferrer'
+                      style={{
+                        fontSize: '14px',
+                        color: '#62EDED',
+                        textDecoration: 'underline',
+                        cursor: 'pointer',
+                      }}
+                    >
+                      View on OpenSea
+                    </a>
                   </div>
                 </div>
               </div>
             </div>
           ))}
-
+          {/* <div className='right-content'>
+            <a
+              href='https://opensea.io/TheForbiddenForest'
+              target='_blank'
+              rel='noopener noreferrer'
+              style={{
+                fontSize: '13px',
+                color: '#EEEE9A',
+                textDecoration: 'underline',
+              }}
+            >
+              View on OpenSea
+            </a>
+          </div> */}
           <div style={comingSoonCard}>
             <h1
               style={{
@@ -293,10 +326,31 @@ const Journey = () => {
                 fontWeight: 'bold',
                 fontFamily: 'Syne',
                 marginTop: '10%',
-                marginBottom: '5%',
+                marginBottom: '',
               }}
             >
               Coming <span style={{ color: '#62EDED' }}>Soon</span>
+            </h1>{' '}
+            <h1 style={{ ...commonStyle }}>
+              {targetDate.getDate()}{' '}
+              <span style={{ color: '#62EDED' }}>
+                {targetDate.toLocaleString('default', { month: 'short' })}
+              </span>
+            </h1>{' '}
+            <h1 style={{ ...commonStyle }}>
+              <a
+                href='https://opensea.io/TheForbiddenForest'
+                target='_blank'
+                rel='noopener noreferrer'
+                style={{
+                  fontSize: '14px',
+                  color: '#62EDED',
+                  textDecoration: 'underline',
+                  cursor: 'pointer',
+                }}
+              >
+                https://opensea.io/TheForbiddenForest
+              </a>
             </h1>
           </div>
         </div>
