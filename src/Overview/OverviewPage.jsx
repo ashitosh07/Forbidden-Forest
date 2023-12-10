@@ -53,6 +53,14 @@ const OverviewPage = () => {
  @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500&family=Mukta:wght@200&family=Mystery+Quest&family=Proza+Libre&family=Staatliches&family=Syne:wght@400;800&display=swap');
   @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500&family=Mukta:wght@200&family=Mystery+Quest&family=Proza+Libre&family=Staatliches&family=Syne:wght@400;800&display=swap');@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500&family=Mukta:wght@200&family=Mystery+Quest&family=Outfit&family=Poppins:ital,wght@0,200;0,300;1,200&family=Proza+Libre&family=Staatliches&family=Syne:wght@400;800&display=swap');
 `
+  const commonStyle = {
+    fontSize: '40px',
+    fontWeight: 'bold',
+    fontFamily: 'Syne',
+
+    // marginBottom: '5%',
+  }
+
   // Set the target date for the countdown (YYYY, MM - 1, DD, HH, mm, ss)
   const targetDate = new Date(2024, 0, 13, 17, 0, 0)
 
@@ -326,6 +334,27 @@ const OverviewPage = () => {
             alt='Logo'
             style={{ width: '50%', marginTop: '20%' }}
           />
+          <h3 style={{ ...commonStyle }}>
+            {targetDate.getDate()}{' '}
+            <span style={{ color: '#62EDED' }}>
+              {targetDate.toLocaleString('default', { month: 'short' })}
+            </span>
+          </h3>{' '}
+          <h1 style={{ ...commonStyle }}>
+            <a
+              href='https://opensea.io/TheForbiddenForest'
+              target='_blank'
+              rel='noopener noreferrer'
+              style={{
+                fontSize: '14px',
+                color: '#62EDED',
+                textDecoration: 'underline',
+                cursor: 'pointer',
+              }}
+            >
+              https://opensea.io/TheForbiddenForest
+            </a>
+          </h1>
           <p style={paragraphStyles2}>
             Get a sneak peek into the upcoming Marketplace of The Forbidden
             Forest. Explore a curated selection of NFTs and immerse yourself in
